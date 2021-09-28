@@ -1,14 +1,23 @@
-# Welcome to your CDK TypeScript project!
+# Serverless NFT Supply Checker
 
-This is a blank project for TypeScript development with CDK.
+This is an example project. It explains how to integrate serverless AWS
+infrastructure with the Ethereum blockchain.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+A Lambda function will check the NFT supply of [an ERC-721 contract](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/)
+periodically and write it as a new file with timestamp to an S3 bucket.
 
-## Useful commands
+## Prerequisites
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+- AWS Account
+- Node.js
+- CDK CLI
+
+## Setup
+
+Install the CDK libraries:
+
+    npm install
+
+Build and deploy the stack:
+
+    npm start
