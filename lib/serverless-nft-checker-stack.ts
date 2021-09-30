@@ -26,7 +26,7 @@ export class ServerlessNftCheckerStack extends cdk.Stack {
     nftChecks.grantWrite(nftChecker);
 
     const rule = new events.Rule(this, "nftCheckRule", {
-      schedule: events.Schedule.cron({ minute: "0", hour: "1" }),
+      schedule: events.Schedule.rate(cdk.Duration.hours(1)),
     });
     rule.addTarget(new eventsTargets.LambdaFunction(nftChecker));
   }
